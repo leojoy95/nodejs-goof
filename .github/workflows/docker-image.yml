@@ -29,6 +29,7 @@ jobs:
     - run: npm i -g snyk
     - run: snyk auth ${{ secrets.SNYK_TOKEN }}
     - run: snyk monitor --org=github-dfl --sarif-file-output=snyk-oss.sarif
+      continue-on-error: true
     - name: Upload result to GitHub Code Scanning
       uses: github/codeql-action/upload-sarif@v1
       with:
