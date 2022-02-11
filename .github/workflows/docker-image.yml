@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      container_image: nodejs-goof:$(date +%s)
+      container_image: nodejs-goof:latest
     
     strategy:
       matrix:
